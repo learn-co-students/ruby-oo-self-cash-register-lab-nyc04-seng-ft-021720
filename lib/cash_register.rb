@@ -28,7 +28,7 @@ class CashRegister
       return "There is no discount to apply." 
     else
       @total -= ((@discount/100.0) * @total).to_i
-    # binding.pry
+    # binding.pry 
       return "After the discount, the total comes to $#{@total}."
     end
   end
@@ -41,6 +41,6 @@ class CashRegister
   def void_last_transaction
     # binding.pry
     @total = 0.0 if @cart == []
-    @total = @total - @last_transactionblah
+    @total -= @last_transaction
   end
 end
